@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Sayfası</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+  
+  <div class="container">
+    
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow-lg">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4 "> 
+              Giriş yap
+            </h3>
+            <div id="loginForm">
+              <form action="">
+                <div class="mb-3">
+                  <label for="epostagiriniz" class="fw-bold">Eposta Adresiniz</label>
+                  <input type="email" name="eposta" id="epostagiriniz" class="form-control" placeholder="Lütfen Eposta Adresiniz" required>
+                <div class="mb-3">
+                  <label for="şifre" class="fw-bold">Şifrenizi</label>
+                  <input type="password" name="parola" id="şifre" class="form-control" placeholder="Lütfen Şifrenizi Giriniz" required>
+                </div>
+                <div class="d-grid mb-3">
+                  <button type="submit" name="login" class="btn btn-primary"><i class="bi bi-box-arrow-in-down-right me-1"></i>Giriş Yap</button>
+                </div>
+                </div>
+                <hr class="my-4">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-secondary" onclick="fromGöster()">
+                    <i class="bi bi-person-plus-fill me-2"></i>Yeni Üye Kaydı</button>
+                </div>
+              </form>
+            </div>
+
+            <div id="kayitFormu" style="display: none;">
+                <div class="mb-3">
+                  <label for="adi" class="fw-bold">Ad-Soyad</label>
+                  <input type="text" name="adi" id="adi" class="form-control" placeholder="Ad -Soyad" required>
+                </div>
+                 <div class="mb-3">
+                  <label for="epostagiriniz" class="fw-bold">Eposta Adresiniz</label>
+                  <input type="email" name="eposta" id="epostagiriniz" class="form-control" placeholder="Lütfen Eposta Adresiniz" required>
+                </div>
+                <div class="mb-3">
+                  <label for="şifre" class="fw-bold">Şifrenizi</label>
+                  <input type="password" name="parola" id="şifre" class="form-control" placeholder="Lütfen Şifrenizi Giriniz" required>
+                </div>
+                <div class="d-grid gap-2">
+
+                  <button type="submit" class="btn btn-secondary" name="login" onclick="fromGöster()">
+                    <i class="bi bi-person-fill-add me-1"></i>Üye Kaydı</button>
+
+                </div>
+            </div>
+                <hr class="my-4">
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-danger">
+                    <i class="bi bi-gogole me-2"></i>Google ile giriş yap</button>
+                  <button type="button" class="btn btn-primary">
+                    <i class="bi bi-facebook me-2"></i>Facebook ile giriş yap</button>
+                  <button type="button" class="btn btn-dark">
+                    <i class="bi bi-twitter-x me-2"></i>X ile giriş yap</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+  </script>
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script >
+    
+
+    AOS.init({ duration: 1200, once: true });
+  </script>
+
+  <script>
+
+    function fromGöster(){
+    const  loginForm=document.getElementById("loginForm");
+    const  kayitFormu=document.getElementById("kayitFormu");
+
+    if(loginForm.style.display==="none"){
+
+    loginForm.style.display="block"
+    kayitFormu.style.display="none"
+    }
+
+    else{
+
+    loginForm.style.display="none"
+    kayitFormu.style.display="block"
+    }
+    }  
+  </script>
+</body>
+</html>
